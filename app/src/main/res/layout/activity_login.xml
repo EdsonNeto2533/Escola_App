@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_app"
+        android:adjustViewBounds="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/etMat"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:inputType="text"
+        android:layout_marginTop="40dp"
+        android:hint="Matrícula" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/etSenha"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:hint="Senha" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_margin="3dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="Entrar"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu sua senha?"
+            android:layout_margin="3dp"
+            />
+
+
+
+
+
+
+
+</LinearLayout>
