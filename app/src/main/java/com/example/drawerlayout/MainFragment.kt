@@ -14,29 +14,16 @@ import androidx.fragment.app.FragmentTransaction
 import java.lang.ClassCastException
 
 //fragmento é uma parte de um layout q eu posso carregar dentro de uma activity
-class mainFragment : Fragment() {
+class MainFragment : Fragment() {
 
 
 
     //dando override no oncreate para dizer qual layout de fragmento abrir
     override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
         var view: View = inflater.inflate(R.layout.mainfragment, container, false)
-        var BTNMain: Button = view.findViewById(R.id.BTNMainFragment)
 
 
-        //nao entendi nada mas abre o outro fragmento, amem jesus kkkk
-        BTNMain.setOnClickListener {
-            val tx = fragmentManager?.beginTransaction()
-            if (tx != null) {
-                tx.replace(R.id.container_fragment, SegundoFragment())
-            }
-            if (tx != null) {
-                tx.commit()
-            }
-        }
-
-
-        return view
+         return view
     }
 
 

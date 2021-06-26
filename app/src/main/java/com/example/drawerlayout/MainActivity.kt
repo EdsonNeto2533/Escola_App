@@ -1,19 +1,11 @@
 package com.example.drawerlayout
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.ToolbarWidgetWrapper
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 
 //precisa tbm implementar a interface NavigationView.OnNavigationItemSelectedListener
@@ -36,31 +28,17 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         navview.setNavigationItemSelectedListener(this)
 
 
-        //tendi nada mas foi, amem sotem q extrair pra algum proposito de deus.
-        // so sei q é o sanduiche
         var act: ActionBarDrawerToggle? = null
         act = ActionBarDrawerToggle(this,drawerlayout,tb,R.string.open,R.string.close )
         drawerlayout.addDrawerListener(act)
         act.setDrawerIndicatorEnabled(true)
         act.syncState()
-        //nao vai rodar enquanto nao for la nos temas e criar o noactionbar e botar no androidmanifest.xml
-        //android:theme="@style/Theme.DrawerLayout.noActionBar"
 
-
-
-
-        // fragmanager é usado para criar uma instancia de um fragmento
-        // e fragtrans é o que adiciona e troca o fragmento
-        //var fragManager: FragmentManager? = null
-        //var fragTrans: FragmentTransaction? = null
-
-        //vamos carregar o fragmento default pra aplicação nao vir em branco
-        //fragManager = supportFragmentManager
         //fragTrans = fragManager.beginTransaction()
 
         //fragmento default da main page
         val tx = supportFragmentManager.beginTransaction()
-        tx.add(R.id.container_fragment, mainFragment())
+        tx.add(R.id.container_fragment, MainFragment())
         tx.commit()
 
 
@@ -82,7 +60,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         if (item.itemId == R.id.homeBTN){
             val tx = supportFragmentManager.beginTransaction()
             //replace pq ja adicionamos antes
-            tx.replace(R.id.container_fragment, mainFragment())
+            tx.replace(R.id.container_fragment, MainFragment())
             tx.commit()
         }
 
