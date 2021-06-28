@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/btnInfoAcademico"
                 android:layout_marginTop="40dp"
                 android:backgroundTint="@color/azul_btn"
                 android:text="Informações Acadêmicas"/>
@@ -38,6 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/btnNotas"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/azul_btn"
                 android:text="Notas e Frequência"/>
@@ -46,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/btnCalendario"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/azul_btn"
                 android:text="Calendário"/>
@@ -54,6 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/btnRematricula"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/azul_btn"
                 android:text="Rematrícula"/>

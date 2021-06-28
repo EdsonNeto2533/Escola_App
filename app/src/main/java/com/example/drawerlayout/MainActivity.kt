@@ -34,15 +34,10 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         act.setDrawerIndicatorEnabled(true)
         act.syncState()
 
-        //fragTrans = fragManager.beginTransaction()
-
         //fragmento default da main page
         val tx = supportFragmentManager.beginTransaction()
         tx.add(R.id.container_fragment, MainFragment())
         tx.commit()
-
-
-        //fragTrans.add(R.id.container_fragment, fragment: MainFragment)
 
 
 
@@ -66,7 +61,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
         if (item.itemId == R.id.tela2BTN){
             val tx = supportFragmentManager.beginTransaction()
-            tx.replace(R.id.container_fragment, SegundoFragment())
+            tx.replace(R.id.container_fragment, InformacoesAcaFragment())
             tx.commit()
         }
         return true
