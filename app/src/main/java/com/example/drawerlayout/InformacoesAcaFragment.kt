@@ -4,25 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ExpandableListAdapter
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 
 class InformacoesAcaFragment: Fragment() {
     private var grupos = mutableListOf<String>()
-    private var filhos = mutableListOf<String>()
-    private var colecao = hashMapOf<String , List<String>>()
+    private var filhos = hashMapOf<String , List<String>>()
     private lateinit var  mExpandableListView: ExpandableListView
     //private lateinit var mExpandableListAdapter: ExpandableListAdapter
+    private lateinit var adapter: MainAdapter
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view: View = inflater.inflate(R.layout.informacoes_aca_fragment,container,false)
 
-        criarGrupos()
-        criarColecoes()
+        alimentarListas()
         mExpandableListView = view.findViewById(R.id.elvInfoAcade)
-        //mExpandableListAdapter = ExpandableListAdapter(this, grupos,filhos)
+
+        adapter = MainAdapter(grupos , filhos)
 
 
 
@@ -30,35 +29,41 @@ class InformacoesAcaFragment: Fragment() {
         return view
     }
 
-    //cria as colecoes e adiciona os filhos no metodo carregarfilhos
-    fun criarColecoes(){
-        val informacoesPessoaisModelo = arrayOf("nome: exemplo" , "cpf: exemplo")
-        val informacoesAcademicasModelo = arrayOf("matricula: exemplo" , "unidade: Paulo Picanço")
-        val historicoAcademicoModelo = arrayOf("Disciplina: exemplo" , "nota: exemplo")
-
-        for (i in grupos.withIndex()){
-            if (i.value.equals("Informações Pessoais")){
-                carregaFilhos(informacoesPessoaisModelo)
-            } else if (i.value.equals("Informações Acadêmicas")){
-                carregaFilhos(informacoesAcademicasModelo)
-            } else if (i.value.equals("Historico Acadêmico")){
-                carregaFilhos(historicoAcademicoModelo)
-            }
-        }
-
-    }
-
-    //carrega os modelos de filhos dentro da lista de filhos
-    private fun carregaFilhos(filhomodelo: Array<String>) {
-            for (i in filhomodelo)
-            filhos.add(i)
-    }
 
 
-    fun criarGrupos(){
+
+
+    fun alimentarListas(){
         grupos.add("Informações Pessoais")
         grupos.add("Informações Acadêmicas")
         grupos.add("Historico Acadêmico")
+
+        val listaPessoal = mutableListOf<String>()
+        val listaAcademica = mutableListOf<String>()
+        val listaHacademica = mutableListOf<String>()
+
+
+        listaPessoal.add("Nome: teste")
+        listaPessoal.add("CPF: teste")
+        listaPessoal.add("RG: teste")
+        listaPessoal.add("Reservista: teste")
+
+        filhos.put(grupos.get(0) , listaPessoal)
+
+        listaAcademica.add("Matricula: teste")
+        listaAcademica.add("Curso: teste")
+        listaAcademica.add("Unidade: teste")
+
+        filhos.put(grupos.get(1) , listaAcademica)
+
+        listaHacademica.add("1 Semestre")
+        listaHacademica.add("anatomia buco , av1: 10 , av2:10 , Media:10")
+        listaHacademica.add("teste")
+        listaHacademica.add("teste")
+
+        filhos.put(grupos.get(2) , listaHacademica)
+
+
 
     }
 
