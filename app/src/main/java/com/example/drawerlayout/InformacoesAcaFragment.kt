@@ -11,17 +11,13 @@ class InformacoesAcaFragment: Fragment() {
     private var grupos = mutableListOf<String>()
     private var filhos = hashMapOf<String , List<String>>()
     private lateinit var  mExpandableListView: ExpandableListView
-    //private lateinit var mExpandableListAdapter: ExpandableListAdapter
     private lateinit var adapter: MainAdapter
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view: View = inflater.inflate(R.layout.informacoes_aca_fragment,container,false)
-
-        alimentarListas()
         mExpandableListView = view.findViewById(R.id.elvInfoAcade)
-
-        adapter = MainAdapter(grupos , filhos)
+        alimentarListas()
 
 
 
@@ -64,6 +60,8 @@ class InformacoesAcaFragment: Fragment() {
         filhos.put(grupos.get(2) , listaHacademica)
 
 
+        adapter = MainAdapter(grupos , filhos)
+        mExpandableListView.setAdapter(adapter)
 
     }
 
