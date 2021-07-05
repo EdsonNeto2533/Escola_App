@@ -31,12 +31,14 @@ class MainFragment : Fragment() {
         }
         btnCalendario.setOnClickListener {
             eventoCalendario()
+            //TODO tela calendario
         }
         btnNotas.setOnClickListener {
             eventoNota()
         }
         btnRematricula.setOnClickListener {
             eventoRematricula()
+            //TODO tela rematricula
         }
 
 
@@ -69,7 +71,7 @@ class MainFragment : Fragment() {
     fun eventoNota() {
         val tx = fragmentManager?.beginTransaction()
         if (tx != null) {
-            tx.replace(R.id.container_fragment, InformacoesAcaFragment())
+            tx.replace(R.id.container_fragment, NotasFrequenciaFragment())
         }
         if (tx != null) {
             tx.commit()

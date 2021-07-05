@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp"
+    android:textSize="32sp"
+    android:text="Notas e Frequência"/>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tabelaNotas">
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Turma"
+                        android:padding="3dip"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="Codigo - Disciplina"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="AV1"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="AV2"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="AV2"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="AV2"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="AVF"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="MF"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="Freq."
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                    <TextView
+                        android:text="Situação"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        />
+                </TableRow>
+
+
+
+
+
+
+            </TableLayout>
+
+
+        </ScrollView>
+
+
+    </HorizontalScrollView>
+
+
+
+
+</LinearLayout>
