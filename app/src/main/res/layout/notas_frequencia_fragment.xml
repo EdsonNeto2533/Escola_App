@@ -28,7 +28,8 @@
                 android:layout_height="wrap_content"
                 android:stretchColumns="1"
                 android:layout_marginTop="20dp"
-                android:id="@+id/tabelaNotas">
+                android:id="@+id/tabelaNotas"
+                >
 
                 <TableRow>
 

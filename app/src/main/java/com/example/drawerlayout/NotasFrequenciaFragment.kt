@@ -1,9 +1,13 @@
 package com.example.drawerlayout
 
+import android.graphics.Color
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -20,6 +24,7 @@ class NotasFrequenciaFragment: Fragment() {
     private lateinit var txMf: TextView
     private lateinit var txFreq: TextView
     private lateinit var txSituacao: TextView
+    private lateinit var tabela: TableLayout
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view: View = inflater.inflate(R.layout.notas_frequencia_fragment,container,false)
@@ -34,7 +39,7 @@ class NotasFrequenciaFragment: Fragment() {
         txMf = TextView(view.context)
         txFreq = TextView(view.context)
         txSituacao = TextView(view.context)
-
+        tabela = view.findViewById(R.id.tabelaNotas)
         alimentaTabela()
 
 
@@ -44,53 +49,71 @@ class NotasFrequenciaFragment: Fragment() {
     }
 
     private fun alimentaTabela() {
-        TODO("ainda nao implementado")
-        /*
-        TableRow tbrow = new TableRow(this);
-TextView txt_plazo = new TextView(this);
-txt_plazo.setText(" Plazo ");
-txt_plazo.setTextColor(Color.WHITE);
-txt_plazo.setTextSize(16);
-txt_plazo.setMinimumHeight(0);
-txt_plazo.setBackgroundColor(Color.DKGRAY);
-txt_plazo.setGravity(Gravity.CENTER);
-tbrow.addView(txt_plazo);
+        //adiciona cada item na coluna
+        txTurma.text = "ODO20211"
+        txTurma.setTextColor(Color.BLACK)
+        txTurma.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txTurma.gravity = Gravity.CENTER
+        //adiciona item na linha
+        trNovo.addView(txTurma)
 
-TextView txt_saldoInicial = new TextView(this);
-txt_saldoInicial.setText(" Saldo Inicial");
-txt_saldoInicial.setTextColor(Color.WHITE);
-txt_saldoInicial.setTextSize(16);
-txt_saldoInicial.setBackgroundColor(Color.DKGRAY);
-txt_saldoInicial.setGravity(Gravity.CENTER);
-tbrow.addView(txt_saldoInicial);
+        txCodigo.text = "OD2701 - Clinica 1"
+        txCodigo.setTextColor(Color.BLACK)
+        txCodigo.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txCodigo.gravity = Gravity.CENTER
+        trNovo.addView(txCodigo)
+        
+        
+        txAv1.text = "7"
+        txAv1.setTextColor(Color.BLACK)
+        txAv1.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txAv1.gravity = Gravity.CENTER
+        trNovo.addView(txAv1)
+        
+        
+        txAv2.text = "7"
+        txAv2.setTextColor(Color.BLACK)
+        txAv2.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txAv2.gravity = Gravity.CENTER
+        trNovo.addView(txAv2)
+        
+        
+        txMedia.text = "7"
+        txMedia.setTextColor(Color.BLACK)
+        txMedia.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txMedia.gravity = Gravity.CENTER
+        trNovo.addView(txMedia)
+        
+        
+        txAvf.text = ""
+        txAvf.setTextColor(Color.BLACK)
+        txAvf.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txAvf.gravity = Gravity.CENTER
+        trNovo.addView(txAvf)
+        
+        
+        txMf.text = "0"
+        txMf.setTextColor(Color.BLACK)
+        txMf.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txMf.gravity = Gravity.CENTER
+        trNovo.addView(txMf)
+        
+        
+        txFreq.text = "80%"
+        txFreq.setTextColor(Color.BLACK)
+        txFreq.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txFreq.gravity = Gravity.CENTER
+        trNovo.addView(txFreq)
+        
+        
+        txSituacao.text = "MAT"
+        txSituacao.setTextColor(Color.BLACK)
+        txSituacao.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
+        txSituacao.gravity = Gravity.CENTER
+        trNovo.addView(txSituacao)
 
-TextView txt_parcialidades = new TextView(this);
-txt_parcialidades.setText(" Parcialidades ");
-txt_parcialidades.setTextColor(Color.WHITE);
-txt_parcialidades.setTextSize(16);
-txt_parcialidades.setBackgroundColor(Color.DKGRAY);
-txt_parcialidades.setGravity(Gravity.CENTER);
-tbrow.addView(txt_parcialidades);
+        tabela.addView(trNovo)
 
-TextView txt_interes = new TextView(this);
-txt_interes.setText(" Interés ");
-txt_interes.setTextSize(16);
-txt_interes.setBackgroundColor(Color.DKGRAY);
-txt_interes.setGravity(Gravity.CENTER);
-txt_interes.setTextColor(Color.WHITE);
-tbrow.addView(txt_interes);
-
-TextView txt_total = new TextView(this);
-txt_total.setText(" Abono Capital");
-txt_total.setTextSize(16);
-txt_total.setBackgroundColor(Color.DKGRAY);
-txt_total.setGravity(Gravity.CENTER);
-txt_total.setTextColor(Color.WHITE);
-tbrow.addView(txt_total);
-
-table.addView(tbrow);
-Etc ...
-         */
     }
 
 }
