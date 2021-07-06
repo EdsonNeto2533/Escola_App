@@ -54,6 +54,7 @@ class NotasFrequenciaFragment: Fragment() {
         txTurma.setTextColor(Color.BLACK)
         txTurma.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
         txTurma.gravity = Gravity.CENTER
+        txTurma.width = 30
         //adiciona item na linha
         trNovo.addView(txTurma)
 
@@ -92,7 +93,7 @@ class NotasFrequenciaFragment: Fragment() {
         trNovo.addView(txAvf)
         
         
-        txMf.text = "0"
+        txMf.text = "7"
         txMf.setTextColor(Color.BLACK)
         txMf.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
         txMf.gravity = Gravity.CENTER
