@@ -64,6 +64,17 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
             tx.replace(R.id.container_fragment, InformacoesAcaFragment())
             tx.commit()
         }
+        if (item.itemId == R.id.calendarioBTN){
+            val tx = supportFragmentManager.beginTransaction()
+            tx.replace(R.id.container_fragment, CalendarioFragment())
+            tx.commit()
+        }
+
+        if (item.itemId == R.id.notas_frequenciasBTN){
+            val tx = supportFragmentManager.beginTransaction()
+            tx.replace(R.id.container_fragment, NotasFrequenciaFragment())
+            tx.commit()
+        }
         return true
     }
 

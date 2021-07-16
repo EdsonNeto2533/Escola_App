@@ -31,7 +31,6 @@ class MainFragment : Fragment() {
         }
         btnCalendario.setOnClickListener {
             eventoCalendario()
-            //TODO tela calendario
         }
         btnNotas.setOnClickListener {
             eventoNota()
@@ -61,7 +60,7 @@ class MainFragment : Fragment() {
     fun eventoCalendario() {
         val tx = fragmentManager?.beginTransaction()
         if (tx != null) {
-            tx.replace(R.id.container_fragment, InformacoesAcaFragment())
+            tx.replace(R.id.container_fragment, CalendarioFragment())
         }
         if (tx != null) {
             tx.commit()

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
+import com.example.drawerlayout.Infra.MainAdapter
 
 class InformacoesAcaFragment: Fragment() {
     private var grupos = mutableListOf<String>()
