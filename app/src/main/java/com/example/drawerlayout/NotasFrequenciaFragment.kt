@@ -29,92 +29,96 @@ class NotasFrequenciaFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view: View = inflater.inflate(R.layout.notas_frequencia_fragment,container,false)
 
-        trNovo = TableRow(view.context)
-        txTurma = TextView(view.context)
-        txCodigo = TextView(view.context)
-        txAv1 = TextView(view.context)
-        txAv2 = TextView(view.context)
-        txMedia = TextView(view.context)
-        txAvf = TextView(view.context)
-        txMf = TextView(view.context)
-        txFreq = TextView(view.context)
-        txSituacao = TextView(view.context)
-        tabela = view.findViewById(R.id.tabelaNotas)
-        alimentaTabela()
 
+        alimentaTabela(view)
 
 
 
         return view
     }
 
-    private fun alimentaTabela() {
-        //adiciona cada item na coluna
-        txTurma.text = "ODO20211"
-        txTurma.setTextColor(Color.BLACK)
-        txTurma.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txTurma.gravity = Gravity.CENTER
-        txTurma.width = 30
-        //adiciona item na linha
-        trNovo.addView(txTurma)
+    private fun alimentaTabela(view: View) {
+        for ( i in 1..2) {
 
-        txCodigo.text = "OD2701 - Clinica 1"
-        txCodigo.setTextColor(Color.BLACK)
-        txCodigo.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txCodigo.gravity = Gravity.CENTER
-        trNovo.addView(txCodigo)
-        
-        
-        txAv1.text = "7"
-        txAv1.setTextColor(Color.BLACK)
-        txAv1.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txAv1.gravity = Gravity.CENTER
-        trNovo.addView(txAv1)
-        
-        
-        txAv2.text = "7"
-        txAv2.setTextColor(Color.BLACK)
-        txAv2.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txAv2.gravity = Gravity.CENTER
-        trNovo.addView(txAv2)
-        
-        
-        txMedia.text = "7"
-        txMedia.setTextColor(Color.BLACK)
-        txMedia.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txMedia.gravity = Gravity.CENTER
-        trNovo.addView(txMedia)
-        
-        
-        txAvf.text = ""
-        txAvf.setTextColor(Color.BLACK)
-        txAvf.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txAvf.gravity = Gravity.CENTER
-        trNovo.addView(txAvf)
-        
-        
-        txMf.text = "7"
-        txMf.setTextColor(Color.BLACK)
-        txMf.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txMf.gravity = Gravity.CENTER
-        trNovo.addView(txMf)
-        
-        
-        txFreq.text = "80%"
-        txFreq.setTextColor(Color.BLACK)
-        txFreq.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txFreq.gravity = Gravity.CENTER
-        trNovo.addView(txFreq)
-        
-        
-        txSituacao.text = "MAT"
-        txSituacao.setTextColor(Color.BLACK)
-        txSituacao.setTextSize(TypedValue.COMPLEX_UNIT_SP , 16F)
-        txSituacao.gravity = Gravity.CENTER
-        trNovo.addView(txSituacao)
 
-        tabela.addView(trNovo)
+            trNovo = TableRow(view.context)
+            txTurma = TextView(view.context)
+            txCodigo = TextView(view.context)
+            txAv1 = TextView(view.context)
+            txAv2 = TextView(view.context)
+            txMedia = TextView(view.context)
+            txAvf = TextView(view.context)
+            txMf = TextView(view.context)
+            txFreq = TextView(view.context)
+            txSituacao = TextView(view.context)
+            tabela = view.findViewById(R.id.tabelaNotas)
 
+            //adiciona cada item na coluna
+            txTurma.text = "ODO20211"
+            txTurma.setTextColor(Color.BLACK)
+            txTurma.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txTurma.gravity = Gravity.CENTER
+            txTurma.width = 30
+            //adiciona item na linha
+            trNovo.addView(txTurma)
+
+            txCodigo.text = "OD2701 - Clinica 1"
+            txCodigo.setTextColor(Color.BLACK)
+            txCodigo.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txCodigo.gravity = Gravity.CENTER
+            trNovo.addView(txCodigo)
+
+
+            txAv1.text = "7"
+            txAv1.setTextColor(Color.BLACK)
+            txAv1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txAv1.gravity = Gravity.CENTER
+            trNovo.addView(txAv1)
+
+
+            txAv2.text = "7"
+            txAv2.setTextColor(Color.BLACK)
+            txAv2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txAv2.gravity = Gravity.CENTER
+            trNovo.addView(txAv2)
+
+
+            txMedia.text = "7"
+            txMedia.setTextColor(Color.BLACK)
+            txMedia.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txMedia.gravity = Gravity.CENTER
+            trNovo.addView(txMedia)
+
+
+            txAvf.text = ""
+            txAvf.setTextColor(Color.BLACK)
+            txAvf.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txAvf.gravity = Gravity.CENTER
+            trNovo.addView(txAvf)
+
+
+            txMf.text = "7"
+            txMf.setTextColor(Color.BLACK)
+            txMf.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txMf.gravity = Gravity.CENTER
+            trNovo.addView(txMf)
+
+
+            txFreq.text = "80%"
+            txFreq.setTextColor(Color.BLACK)
+            txFreq.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txFreq.gravity = Gravity.CENTER
+            trNovo.addView(txFreq)
+
+
+            txSituacao.text = "MAT"
+            txSituacao.setTextColor(Color.BLACK)
+            txSituacao.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+            txSituacao.gravity = Gravity.CENTER
+            trNovo.addView(txSituacao)
+
+            tabela.addView(trNovo)
+        }
     }
 
 }
