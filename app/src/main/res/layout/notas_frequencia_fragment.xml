@@ -36,12 +36,14 @@
                     <TextView
                         android:text="Turma"
                         android:padding="3dip"
+                        android:layout_width="30dp"
                         android:layout_weight="1"
                         android:gravity="center"/>
                     <TextView
                         android:text="Codigo - Disciplina"
                         android:gravity="center"
                         android:layout_weight="1"
+                        android:layout_width="30dp"
                         android:padding="3dip"
                         />
                     <TextView
@@ -80,6 +82,9 @@
                         android:gravity="center"
                         android:padding="3dip"
                         />
+
+
+
                 </TableRow>
 
 

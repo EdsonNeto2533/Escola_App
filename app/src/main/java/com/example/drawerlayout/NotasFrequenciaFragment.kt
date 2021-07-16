@@ -66,6 +66,7 @@ class NotasFrequenciaFragment: Fragment() {
             txCodigo.setTextColor(Color.BLACK)
             txCodigo.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
             txCodigo.gravity = Gravity.CENTER
+            txCodigo.width = 30
             trNovo.addView(txCodigo)
 
 
