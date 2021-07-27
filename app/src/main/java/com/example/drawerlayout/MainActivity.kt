@@ -6,6 +6,10 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.drawerlayout.Fragments.CalendarioFragment
+import com.example.drawerlayout.Fragments.InformacoesAcaFragment
+import com.example.drawerlayout.Fragments.MainFragment
+import com.example.drawerlayout.Fragments.NotasFrequenciaFragment
 import com.google.android.material.navigation.NavigationView
 
 //precisa tbm implementar a interface NavigationView.OnNavigationItemSelectedListener

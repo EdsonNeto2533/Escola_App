@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
     private fun realizarLoginProvisorio(){
         val inti = Intent(this, MainActivity::class.java)
         startActivity(inti)
+        finish()
     }
 
 

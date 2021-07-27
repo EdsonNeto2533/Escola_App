@@ -1,4 +1,4 @@
-package com.example.drawerlayout
+package com.example.drawerlayout.Fragments
 
 import android.graphics.Color
 import android.os.Bundle
@@ -11,6 +11,7 @@ import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.drawerlayout.R
 
 class NotasFrequenciaFragment: Fragment() {
 

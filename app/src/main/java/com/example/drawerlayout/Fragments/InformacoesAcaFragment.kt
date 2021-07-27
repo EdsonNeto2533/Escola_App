@@ -1,4 +1,4 @@
-package com.example.drawerlayout
+package com.example.drawerlayout.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import com.example.drawerlayout.Infra.MainAdapter
+import com.example.drawerlayout.R
 
 class InformacoesAcaFragment: Fragment() {
     private var grupos = mutableListOf<String>()

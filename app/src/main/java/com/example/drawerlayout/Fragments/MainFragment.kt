@@ -1,4 +1,4 @@
-package com.example.drawerlayout
+package com.example.drawerlayout.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.drawerlayout.R
 
 //fragmento é uma parte de um layout q eu posso carregar dentro de uma activity
 class MainFragment : Fragment() {
@@ -22,7 +23,6 @@ class MainFragment : Fragment() {
         val btnInfoAca: Button = view.findViewById(R.id.btnInfoAcademico)
         val btnNotas: Button = view.findViewById(R.id.btnNotas)
         val btnCalendario: Button = view.findViewById(R.id.btnCalendario)
-        val btnRematricula: Button = view.findViewById(R.id.btnRematricula)
 
 
         //eventos de botoes
@@ -35,10 +35,7 @@ class MainFragment : Fragment() {
         btnNotas.setOnClickListener {
             eventoNota()
         }
-        btnRematricula.setOnClickListener {
-            eventoRematricula()
-            //TODO tela rematricula
-        }
+
 
 
 
@@ -77,15 +74,7 @@ class MainFragment : Fragment() {
         }
     }
 
-    fun eventoRematricula() {
-        val tx = fragmentManager?.beginTransaction()
-        if (tx != null) {
-            tx.replace(R.id.container_fragment, InformacoesAcaFragment())
-        }
-        if (tx != null) {
-            tx.commit()
-        }
-    }
+
 
 
 }
