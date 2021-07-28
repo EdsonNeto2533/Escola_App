@@ -71,7 +71,7 @@ class MainAdapter(grupos: MutableList<String>, filhos: HashMap<String, List<Stri
         var sChild: String = getChild(groupPosition, childPosition).toString()
         textView.text = sChild
 
-
+        //filho selecionado
         textView.setOnClickListener {
                 Toast.makeText(parent.context, sChild , Toast.LENGTH_SHORT).show()
         }
