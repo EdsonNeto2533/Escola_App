@@ -15,11 +15,11 @@
             <item
                 android:id="@+id/calendarioBTN"
                 android:icon="@drawable/ic_baseline_calendario"
-                android:title="Informações Academicas" />
+                android:title="Calendário" />
             <item
                 android:id="@+id/notas_frequenciasBTN"
                 android:icon="@drawable/ic_baseline_notes_24"
-                android:title="Informações Academicas" />
+                android:title="Notas e frequência" />
 
 
         </menu>
