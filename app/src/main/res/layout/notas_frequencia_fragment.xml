@@ -16,7 +16,7 @@
 
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
 
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TableLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:stretchColumns="0,1"
                 android:layout_marginTop="20dp"
@@ -36,49 +36,41 @@
                     <TextView
                         android:text="Turma"
                         android:padding="3dip"
-                        android:layout_width="30dp"
-                        android:layout_weight="1"
+                        android:layout_width="100dp"
                         android:gravity="center"/>
                     <TextView
                         android:text="Codigo - Disciplina"
                         android:gravity="center"
-                        android:layout_weight="1"
-                        android:layout_width="30dp"
+                        android:layout_width="200dp"
                         android:padding="3dip"
                         />
                     <TextView
                         android:text="AV1"
                         android:gravity="center"
-                        android:layout_weight="1"
                         android:padding="3dip"
                         />
                     <TextView
                         android:text="AV2"
                         android:gravity="center"
                         android:padding="3dip"
-                        android:layout_weight="1"
                         />
                     <TextView
                         android:text="AVF"
                         android:gravity="center"
                         android:padding="3dip"
-                        android:layout_weight="1"
                         />
                     <TextView
                         android:text="MF"
-                        android:layout_weight="1"
                         android:gravity="center"
                         android:padding="3dip"
                         />
                     <TextView
                         android:text="Freq."
-                        android:layout_weight="1"
                         android:gravity="center"
                         android:padding="3dip"
                         />
                     <TextView
                         android:text="Situação"
-                        android:layout_weight="1"
                         android:gravity="center"
                         android:padding="3dip"
                         />
